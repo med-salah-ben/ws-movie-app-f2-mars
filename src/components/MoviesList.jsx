@@ -8,9 +8,9 @@ const MoviesList = ({movies , searchRating ,searchName}) => {
     <div style={{display:'flex' , flexWrap:"wrap" , justifyContent:"space-around"}}>
         {
             movies
-            // .filter((el)=>
-            // el.name.toLowerCase().includes(searchName.toLowerCase()) && Number(el.rating) >= searchRating
-            // )
+            .filter((el)=>
+            el.name.toLowerCase().includes(searchName.toLowerCase()) && Number(el.rating) >= searchRating
+            )
             .map((el)=><MovieCard movie={el} key={el.id} />)
         }
     </div>
